@@ -1,0 +1,140 @@
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffcd00;
+    position: sticky;position: -webkit-sticky;top: 0;z-index: 1000;background-color: #ffffff;
+   height:55px; 
+}
+.contenedor_header{
+    width:96%; 
+    margin:0 auto; 
+    display:flex; 
+}
+
+.contenedor_header > div{width:33%; }
+.headerLogo {
+    text-align: center;
+    font-family: var(--main-font-bold);
+    font-size: 20px;
+}
+.headerMenu {
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+}
+.headerUser {justify-content: flex-end;}
+img#imgLogo {
+    margin-left: 20px;
+    width:30px;
+}
+
+#hamburger{
+    display: block;
+    width: 46px;
+    height: 20px;
+    position: relative;
+}
+
+#hamburger:before{
+    content: "";
+    position: absolute;
+    right:0;
+    z-index: 100;
+    top:0px;
+    width: 1px;
+    height:80%;
+    background: #CECECE;
+}
+
+.headerMenu a img{ width:24px;}
+.headerLogo a {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.headerUser {display: flex;align-items: center;}	
+.name {
+    color:#a6a6a8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'AvenirNextLTPro-Medium';
+    font-size: 14px;
+    padding-right: 20px;
+}
+img.imgShowMenuUser {
+    width: 24px;
+    vertical-align:middle; 
+}
+
+
+
+
+
+/*Titulo*/
+
+.titulo{
+   
+    background-color: #f5f4f2;
+    box-sizing: border-box;
+}
+
+/*.titulo {
+    padding: 8px 2% 14px 15px;
+    background-color: #fafafa;
+    font-size: 24px;
+    color: #43413B;
+    font-weight: 800;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: sticky;
+    top: 41px;
+    z-index: 9;
+}
+.titulo > div {width: 50%;}*/
+.titulo .ruta {
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 7px 0px 7px 0px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.titulo .ruta a {color: #7E7E7E;text-decoration: none;display: flex;
+    align-items: center;}
+
+.titulo .ruta a:last-child {
+        font-family: 'Avenir_Next_Demi_Bold';
+}
+.titulo .ruta a::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(../../assets/img/arrow_header.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 8px;
+    margin: 0px 10px 0px 10px;
+}
+ 
+
+.titulo .ruta a:not(:first-child)::after { 
+ 
+    display:none;  
+}
+
+.icoHome {
+    width:17px;
+}
+@media screen and (max-width:700px) {
+    .name{display: none;}
+}

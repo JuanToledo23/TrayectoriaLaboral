@@ -1,0 +1,297 @@
+.informacionSocio{
+    width:100%;
+    background-color: #f8f8f8;
+  
+}
+
+.cont_informacionSocio{
+    font-family: 'ProximaNova-Regular';
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+    box-sizing:border-box; 
+   
+    display:table;  
+  
+}
+.cont_informacionSocio > div {
+   display: table-cell;
+    vertical-align: top;
+    width: 19.70%;
+    position: relative;
+ 
+}
+.nombre_usuario {
+    font-size: 1em;
+    font-family: var(--main-font-bold);
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.apellido_usuario {
+
+    color:#9b9b9b; 
+
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contenedor_titulo {
+   width: 94%;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.contenedor_titulo > div{
+    width:50%; 
+}
+
+
+.borde{
+    position:relative; 
+    padding-left: 20px;
+}
+
+.borde:after {
+     content: "";
+    position: absolute;
+    left:0;
+    z-index: 100;
+    top: 0px;
+    width: 1px;
+    height: 100%;
+    background: #CECECE;
+}
+
+.contenedor_titulo {
+
+   width: 94%;
+    margin: 0 auto;
+    padding: 20px 0px 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.contenedor_titulo > div{
+    width:50%; 
+}
+
+.cont_informacionSocio > div {
+   display: inline-block;
+    vertical-align: top;
+    width: 19.70%;
+    position: relative;
+ 
+}
+.borde{
+    position:relative; 
+    padding-left: 20px;
+    height: 37px;
+}
+
+
+
+
+.titulosSocio {
+    
+    color: #aaa9a9;
+}
+.titulosSocio .nombreSocio div:first-of-type {
+    width: 50px;
+}
+.textoSocio {
+    color: #5a5a59;
+    
+}
+.detalleSocio,
+.nombreSocio {
+    display: flex;
+}
+.detalleSocio .nombreSocio {
+    width: 30%;
+}
+.titulo_bloque {
+    margin-bottom: 10px;
+    color:#bbbbbb;
+    padding-left: 20px; 
+}
+.detalleSocio > div {
+    width: 17.5%;
+    padding: 16px 0px 16px 0px;
+    box-sizing: border-box;
+}
+
+.nombreSocio div:last-of-type {
+    color: #5a5a59 !important;
+}
+.socio {
+    background-image: url(../img/personal/empleado3.jpg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position:center;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 31px;
+    margin-left: 11px;
+}
+.unidadNegocio {
+    background-image: url(../img/solElektra.svg);
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    background-size: 15px;
+    background-position: center;
+    background-color:#ffffff;
+    border-radius: 50%;
+    position: absolute;
+    right: -14px;
+    bottom: -7px;
+}
+
+.usuario, info_usuario {
+    display: inline-block;
+    width: 50%;
+    float: left;
+}
+
+
+.linkAzul {
+    text-decoration: underline;
+    color: #007aa8;
+}
+.bold {
+    font-family: 'ProximaNovaBold';
+}
+.textoSocio > div {
+    margin-right: 20px;
+    position:relative; 
+}
+
+.textoSocio > div:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    top: 36px;
+    width: 1px;
+    height: 50%;
+    background: #CECECE;
+}
+.textoSocio > div:last-of-type{border: none;}
+.textoSocio > div:last-of-type {
+    display: flex;
+    align-items: center;
+}
+.estatus {
+    display:inline-block; 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.baja {background-color: #f5333f;}
+
+/*Menu Azul*/
+.menuAzul {
+    width: 100%;
+    overflow:auto; 
+    background-color: #122338;
+}
+.menuAzul ul {
+   display:table; 
+   width: 100%;
+    /* width: 8.33%; */
+}
+ul.linksMenu li {
+    padding: 14px 6px;
+    display:table-cell; 
+    cursor:pointer; 
+}
+.menuAzul li a {
+    text-decoration: none;
+    color: #ffffff;
+  
+    font-family: 'ProximaNova-Regular';
+    display: block;
+ 
+    box-sizing: border-box;
+    font-size:1em;
+    text-align: center;
+}
+.menuAzul li:hover{
+    background-color: #ffd600;
+    color: #5a5a59;
+    font-family: 'ProximaNovaBold';
+    height:100%; 
+}
+
+.menuAzul li:hover a{
+    color:#5d5d5d!important;
+        font-family: var(--main-font-bold);
+
+}
+.menuAzul li.activeMenuAzul {
+    background-color: #ffd600;
+    color: #5a5a59;
+    font-family: 'ProximaNovaBold';
+    height:100%; 
+}
+
+@media screen and (max-width:964px){
+    .menuAzul{
+        overflow:auto;
+    }
+    ul.linksMenu li{
+        min-width: 130px; 
+    }
+}
+
+@media screen and (max-width:800px){
+    .cont_informacionSocio > div {
+        display:block;
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .usuario,
+    .info_usuario{
+        display:block;
+        width: 100%; 
+    }
+
+    .nombre_usuario,
+    .apellido_usuario{
+        width: 100%;
+    }
+    .nombre_usuario{
+        margin-top:10px;  
+    }
+    .socio{
+        margin:0 auto; 
+        margin-bottom:20px;
+        margin-top:10px; 
+    }
+
+    .cont_informacionSocio{
+        text-align: center;
+        padding:0px;
+        font-size:1.2em;  
+    }
+    .titulo_bloque{
+        padding-left:0px;
+        margin-bottom: 0px;
+        margin-top:20px; 
+        font-family: var(--main-font-bold); 
+    }
+    .borde:after{
+        background-color:transparent; 
+    }
+
+}

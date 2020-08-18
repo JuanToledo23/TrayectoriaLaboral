@@ -1,0 +1,85 @@
+/* @import url('modal.css');
+@import url('jquery.modal.min.css');
+@import url('columnas.css');
+@import url('utilidades.css');
+@import url('forms.css');
+@import url('fonts.css');
+@import url('tooltip.css');
+
+@import url('menu.css');
+@import url('rancho.css');
+@import url('sobreMi.css');
+@import url('mapaCasas.css');
+@import url('filtro.css');
+@import url('arbol.css'); */
+
+@import url('header.css');
+@import url('fonts.css');
+@import url('menu.css');
+@import url('forms.css');
+
+/* general */
+*{ margin: 0px; padding: 0px; box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+a{text-decoration: none; color:#5d5d5d;}
+:root{
+    --main-color:#ffcd00;
+    --secundary-color: #cccccc;
+    --main-font-regular:'ProximaNova-Regular';
+    --main-font-bold:'ProximaNovaBold';
+    --main-font-light:'ProximaNova-Light';
+    --main-font-medium:'ProximaNova-Regular';
+}
+.medium{font-family: var(--main-font-medium);}
+html, body{
+	font-family: var(--main-font-regular);
+	background-color:#ffffff;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 14px;
+	color: #2d2926;;
+	min-width: 500px;
+	height: 100%;
+}
+.page{
+    margin-bottom: 60px;    
+    min-width: 500px;
+}
+
+.tit {
+    color: #333333;
+    font-family: 'AvenirNextLTPro-Medium';
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.titCol {
+    color: #333333;
+    font-family: 'AvenirNextLTPro-Medium';
+    width: 100%;
+    margin: auto;
+    font-size: 15px;
+}
+.gris {
+    width: 100%;
+    margin: 0px auto;
+    padding: 15px 15px;
+    background-color: #faf9f9;
+    -moz-box-shadow: 0 0px 1px rgb(226, 222, 222);
+    -webkit-box-shadow: 0 0px 1px rgb(226, 222, 222);
+    box-shadow: 0 0px 1px rgb(226, 222, 222);    margin-bottom: 15px;    text-align: justify;
+}
+.contSecc {width: 94%;margin-top: 20px;margin: auto;max-width: 1600px;
+    margin: auto;}
+.contSecc-fluid{
+    width: 100%;
+}
+
+img.ico {width: 20px; height: 20px;    cursor: pointer;}
+
+strong{
+    font-family: var(--main-font-bold);
+}

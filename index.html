@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge" />
+	<title>Inicio</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/infoSocio.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/botones_trayectoria.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+
+	<div class="pageHome">
+		<header></header>
+
+		<div class="titulo">
+			<div class="contenedor_titulo" style="display:flex; ">
+				<div class="ruta">
+					<a href="index.html"><img src="assets/img/icoHome.svg" class="icoHome"></a>
+					<a href="index.html">Perfil</a> 
+				</div>
+				<div>
+					<form id="miForm" name="miForm" action="" method="get">
+						<div class="w87">
+							<input type="text" id="busca" placeholder="Escribe el nombre o número de sucursal">
+							<input type="submit" class="buscar" value="">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<menuPricipal></menuPricipal>
+		<div class="informacionSocio">
+			<div class="cont_informacionSocio">
+				<div>
+					<div class="contenedor_usuario">
+						<div class="usuario">
+							<div class="titulo_bloque">Socio</div>
+							<div class="socio">
+							    <div class="unidadNegocio"></div>
+						    </div>
+						</div>
+						<div class="info_usuario">
+							<div class="titulo_bloque">60046723</div>
+							<div class="nombre_usuario">Juan Alberto </div>
+							<div class="apellido_usuario"> Toledo Tello</div>
+						</div>
+					</div>
+				</div>
+
+				<div>
+						<div class="titulo_bloque"> Puesto</div>
+						<div class="borde">Jefe de <br> producto</div>
+				</div>
+
+				<div>
+						<div class="titulo_bloque">Formato de equipo</div>
+						<div class="borde">
+							<a href="#" class="linkAzul">Roman <br> Ortega Castillo</a>
+						</div>
+				</div>
+
+				<div>
+						<div class="titulo_bloque">Ubicación</div>
+						<div class="borde">
+							<a href="#" class="linkAzul">EKT M Monterrey<br> Solidaridad</a>
+						</div>
+				</div>
+
+				<div>
+					<div class="titulo_bloque">Estatus</div>
+					<div class="borde">
+					<span class="estatus baja"></span>Baja
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="menuAzul">
+			<ul class="linksMenu">
+				<li><a href="#">KPSIs</a></li>
+				<li><a href="#">Rank de encuesta</a></li>
+				<li><a href="#">Perfil</a></li>
+				<li><a href="#" class="activeMenuAzul">Trayectoria laboral</a></li>
+				<li><a href="#">Niko Niko</a></li>
+				<li><a href="#">Cuéntanos</a></li>
+				<li><a href="#">Censo</a></li>
+				<li><a href="#">Auditoría</a></li>
+				<li><a href="#">Ausentismo</a></li>
+				<li><a href="#">Claridad</a></li>
+				<li><a href="#">Asistencias</a></li>
+				<li><a href="#">Salario emocional</a></li>
+			</ul>
+		</div>
+
+	   <div style="position: relative;">
+			<div class="contenedorTitulo">
+				<div class="tituloPrincipal">Trayectoria laboral</div>
+				<div class="circleDiv">
+					<img class="imgDescarga" style="padding-bottom: 2px;" src="assets/img/descarga_reporte.svg">
+				</div>
+			</div>
+			<div class="zoomBotones">
+				<div class="zoomMenos">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.48 21.23" class="zoomButton imgDescarga" onclick="zoomIn()">
+						<path d="M11.19,7.64H5.85a.88.88,0,1,0,0,1.76h5.34a.88.88,0,1,0,0-1.76Z"/>
+						<path d="M20.23,19.73l-5.34-5.55a8.59,8.59,0,1,0-1.31,1.19L19,21a.87.87,0,0,0,.63.27.9.9,0,0,0,.62-.25A.88.88,0,0,0,20.23,19.73Zm-5-11.21A6.76,6.76,0,1,1,8.52,1.76,6.77,6.77,0,0,1,15.28,8.52Z"/>
+					</svg>
+				</div>
+				<div class="zoomMas">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.47 21.23" class="zoomButton imgDescarga" onclick="zoomOut()">
+						<path d="M11.19,7.64H9.4V5.85a.88.88,0,1,0-1.76,0V7.64H5.85a.88.88,0,1,0,0,1.76H7.64v1.79a.88.88,0,0,0,1.76,0V9.4h1.79a.88.88,0,1,0,0-1.76Z"/>
+						<path d="M20.23,19.73l-5.34-5.55a8.59,8.59,0,1,0-1.31,1.19L19,21a.87.87,0,0,0,.63.27.9.9,0,0,0,.62-.25A.88.88,0,0,0,20.23,19.73Zm-5-11.21A6.76,6.76,0,1,1,8.52,1.76,6.76,6.76,0,0,1,15.27,8.52Z"/>
+					</svg>
+				</div>
+			</div>
+	   </div>
+	   
+	   <br>
+
+        <div class="overFlow">
+			<div class="estatus_trayectoria_laboral ">
+				<div class="new_status disabled">
+					<div class="img_box estatus_naranja">
+						<img src="assets/img/contratacion.svg">
+					</div>
+					<div class="text_box tex_naranja">
+						Contratación
+					</div>
+				</div>
+				<div class="new_status disabled">
+					<div class="img_box estatus_azul">
+						<img src="assets/img/cambio_de_puesto.svg">
+					</div>
+					<div class="text_box tex_azul">
+						Cambio de puesto
+					</div>
+				</div>
+				<div class="new_status disabled">
+					<div class="img_box estatus_verde">
+						<img src="assets/img/modificacion_sueldo.svg">
+					</div>
+					<div class="text_box tex_verde">
+						Modificación sueldo
+					</div>
+				</div>
+				<div class="new_status disabled">
+					<div class="img_box estatus_morado">
+						<img src="assets/img/transferencia.svg">
+					</div>
+					<div class="text_box tex_morado">
+						Transferencia
+					</div>
+				</div>
+				<div class="new_status disabled">
+					<div class="img_box estatus_rosa">
+						<img src="assets/img/reactivacion.svg">
+					</div>
+					<div class="text_box tex_rosa">
+						Reactivación
+					</div>
+				</div>
+
+				<div class="new_status disabled">
+					<div class="img_box estatus_rojo">
+						<img src="assets/img/baja.svg">
+					</div>
+					<div class="text_box tex_rojo">
+						Baja
+					</div>
+				</div>
+				<div class="new_status disabled">
+					<div class="img_box estatus_morado2">
+						<img src="assets/img/baja.svg">
+					</div>
+					<div class="text_box tex_morado2">
+						No registrado
+					</div>
+				</div>
+			</div>
+		</div>
+  
+  
+		 <div class="contenedorLineTiempo">
+			<div class="line">
+				<button class="btnFlecha" onclick="avanzaIzquierda()"><img src="assets/img/arrow-left.svg"></button>
+				<span class="divider"></span>
+				<button class="btnFlecha" onclick="avanzaDerecha()"><img src="assets/img/arrow-right.svg"></button>
+				
+			  </div>
+			  <div class="timelineGrid">
+				<div class="timeline__wrapGrid">
+				  <div class="timeline__itemsGrid gridStr" id="itemsGrid">
+					<div class="contenedorBolita verde pruebaColor" style="width: 100%;">
+						<!-- <div class="dropdown">
+							
+							<div class="bolita bolitaVerde"></div>
+						  </div> -->
+						  <div class="bolita bolitaVerde" style="border-radius: 100%; overflow: hidden;">
+							<div class="colorBolita1"></div>
+							<div class="colorBolita2"></div>
+							<div class="colorBolita3"></div>
+						  </div>
+						<div class="color1"></div>
+						<div class="color2"></div>
+						<div class="color3"></div>
+						
+					</div>
+			  	</div>
+		 </div>
+
+		
+		</div>
+		<!-- Fin conSecc -->
+
+	
+
+		<br><br>
+
+	<pie></pie>
+</div><!-- Fin page -->
+
+
+<script type="text/javascript" src="assets/js/librerias.js"></script>
+
+
+</body>
+</html>
+<style>
+
+</style>
