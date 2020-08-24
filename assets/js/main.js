@@ -153,450 +153,445 @@ anoReales.forEach(element => {
 
 contenedorItemsGrid.style = 'grid-template-columns: repeat('+columnas+' , 1fr); transform: translate3d('+ posicion +'%, 0px, 0px); width: ' + totalWidth + '%;';
 var transferenciaRows = 0;
-// todosEventos.reverse().forEach(event => {
+todosEventos.reverse().forEach(event => {
 
-//     var duracion = sacarDuracion(event.fechaInicio, event.fechaFin);
+    var duracion = sacarDuracion(event.fechaInicio, event.fechaFin);
 
-//     var evento = document.createElement('div');
-//     evento.style = 'background-color: #00a148';
+    var evento = document.createElement('div');
+    evento.style = 'background-color: #00a148';
 
-//     var col = columnas - sumDuracion - duracion - 1;
-//     var lineaEvento = document.createElement('div');
-//     var rowLine = nivelRow ;
-//     var colLine = col;
-//     var color = '';
+    var col = columnas - sumDuracion - duracion - 1;
+    var lineaEvento = document.createElement('div');
+    var rowLine = nivelRow ;
+    var colLine = col;
+    var color = '';
 
-//     if(event.cambioNivel) {
-//         nivelRow++;
-//         lineaEvento = document.createElement('div');
-//         rowLine = nivelRow ;
+    if(event.cambioNivel) {
+        nivelRow++;
+        lineaEvento = document.createElement('div');
+        rowLine = nivelRow ;
         
-//         color = '';
-//         lineaEvento.classList.add('lineEvento');
+        color = '';
+        lineaEvento.classList.add('lineEvento');
         
-//         switch(event.motivo) {
-//             case 'contratacion':
-//                 colLine = col + 3;
-//                 color = '#ff8300';
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
-//             case 'modificacionSueldo':
-//                 colLine = col + 3;
-//                 color = '#00a148';
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
-//             case 'cambioPuesto':
-//                 colLine = col + 3;
-//                 color = '#00b4d1';
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
-//             case 'baja':
-//                 colLine = col + 3;
-//                 color = '#ff2f28';
-//                 duracionReactivacion = duracion + Math.round(espaciosVacios);
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracionReactivacion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
-//             case 'reactivacion':
-//                 colLine = col + 3;
-//                 color = '#ff37ee';
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
-//             case 'transferencia':
-//                 colLine = col + 3;
-//                 color = '#9252f5';
-//                 lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
-//                 break;
+        switch(event.motivo) {
+            case 'contratacion':
+                colLine = col + 3;
+                color = '#ff8300';
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
+            case 'modificacionSueldo':
+                colLine = col + 3;
+                color = '#00a148';
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
+            case 'cambioPuesto':
+                colLine = col + 3;
+                color = '#00b4d1';
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
+            case 'baja':
+                colLine = col + 3;
+                color = '#ff2f28';
+                duracionReactivacion = duracion + Math.round(espaciosVacios);
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracionReactivacion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
+            case 'reactivacion':
+                colLine = col + 3;
+                color = '#ff37ee';
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
+            case 'transferencia':
+                colLine = col + 3;
+                color = '#9252f5';
+                lineaEvento.style = 'grid-column: '+ colLine +' / span '+ duracion +';grid-row: '+rowLine+' / '+rowLine+'; border: dashed 1px '+ color +'; border-top: unset;border-left: unset;';
+                break;
             
-//         }
+        }
         
 
-//         // contenedorItemsGrid.appendChild(lineaEvento);
-//     } 
-
+        // contenedorItemsGrid.appendChild(lineaEvento);
+    } 
     
-//     // col = col ;
-    
+    evento.classList.add('flex');
 
-    
-//     evento.classList.add('flex');
+    var contenidoEvento = document.createElement('div');
+    contenidoEvento.classList.add('contenedorBolita');
 
-//     var contenidoEvento = document.createElement('div');
-//     contenidoEvento.classList.add('contenedorBolita');
+    var bolita = document.createElement('div');
+    bolita.classList.add('bolita');
+    var colorLineaFin = '';
+    switch(event.motivo) {
+        case 'contratacion':
+            colorLineaFin = '#ff8300';
+            bolita.classList.add('naranja');
+            break;
+        case 'modificacionSueldo':
+            colorLineaFin = '#00a148';
+            contenidoEvento.classList.add('verde');
+            bolita.classList.add('bolitaVerde');
+            contenidoEvento.style.width = '100%';
+            var lineaAbajo = document.createElement('div');
+            lineaAbajo.classList.add('lineaAbajo');
+            lineaAbajo.classList.add('diplayNone');
+            var rowLineAbajo = nivelRow + 1;
+            lineaAbajo.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+rowLineAbajo+' / 10;position: relative;';
+            var contenedorTextos = document.createElement('div');
+            contenedorTextos.classList.add('textosLineas');
 
-//     var bolita = document.createElement('div');
-//     bolita.classList.add('bolita');
-//     var colorLineaFin = '';
-//     switch(event.motivo) {
-//         case 'contratacion':
-//             colorLineaFin = '#ff8300';
-//             bolita.classList.add('naranja');
-//             break;
-//         case 'modificacionSueldo':
-//             colorLineaFin = '#00a148';
-//             contenidoEvento.classList.add('verde');
-//             bolita.classList.add('bolitaVerde');
-//             contenidoEvento.style.width = '100%';
-//             var lineaAbajo = document.createElement('div');
-//             lineaAbajo.classList.add('lineaAbajo');
-//             lineaAbajo.classList.add('diplayNone');
-//             var rowLineAbajo = nivelRow + 1;
-//             lineaAbajo.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+rowLineAbajo+' / 10;position: relative;';
-//             var contenedorTextos = document.createElement('div');
-//             contenedorTextos.classList.add('textosLineas');
+            if(event.e !== '') {
+                var textR = document.createTextNode(event.r + ',');
+                var textRDiv = document.createElement('div');
+                textRDiv.classList.add('textoR');
+                textRDiv.appendChild(textR);
+                var textE = document.createTextNode(event.e);
+                var textEDiv = document.createElement('div');
+                textRDiv.classList.add('textoE');
+                textEDiv.appendChild(textE);
+                contenedorTextos.appendChild(textRDiv);
+                contenedorTextos.appendChild(textEDiv);
+            } else {
+                var text = document.createTextNode(event.r);
+                contenedorTextos.appendChild(text);
+            }
+            lineaAbajo.appendChild(contenedorTextos);
+            contenedorItemsGrid.appendChild(lineaAbajo);
 
-//             if(event.e !== '') {
-//                 var textR = document.createTextNode(event.r + ',');
-//                 var textRDiv = document.createElement('div');
-//                 textRDiv.classList.add('textoR');
-//                 textRDiv.appendChild(textR);
-//                 var textE = document.createTextNode(event.e);
-//                 var textEDiv = document.createElement('div');
-//                 textRDiv.classList.add('textoE');
-//                 textEDiv.appendChild(textE);
-//                 contenedorTextos.appendChild(textRDiv);
-//                 contenedorTextos.appendChild(textEDiv);
-//             } else {
-//                 var text = document.createTextNode(event.r);
-//                 contenedorTextos.appendChild(text);
-//             }
-//             lineaAbajo.appendChild(contenedorTextos);
-//             contenedorItemsGrid.appendChild(lineaAbajo);
+            break;
+        case 'cambioPuesto':
+            colorLineaFin = '#00b4d1';
+            bolita.classList.add('azul');
+            break;
+        case 'baja':
 
-//             break;
-//         case 'cambioPuesto':
-//             colorLineaFin = '#00b4d1';
-//             bolita.classList.add('azul');
-//             break;
-//         case 'baja':
+            colorLineaFin = '#ff2f28';
+            contenidoEvento.classList.add('rojo');
+            bolita.classList.add('bolitaRojo');
+            contenidoEvento.style.width = '100%';
 
-//             colorLineaFin = '#ff2f28';
-//             contenidoEvento.classList.add('rojo');
-//             bolita.classList.add('bolitaRojo');
-//             contenidoEvento.style.width = '100%';
+            break;
+        case 'reactivacion':
+            colorLineaFin = '#ff37ee';
+            bolita.classList.add('rosa');
+            break;
+        case 'transferencia':
+            colorLineaFin = '#9252f5';
+            bolita.classList.add('morado');
+            break;
+        default:
+            colorLineaFin = '#a8a8a8';
+            contenidoEvento.classList.add('otros');
+            bolita.classList.add('bolitaOtros');
+            contenidoEvento.style.width = '100%';
+            break;
+    }
 
-//             break;
-//         case 'reactivacion':
-//             colorLineaFin = '#ff37ee';
-//             bolita.classList.add('rosa');
-//             break;
-//         case 'transferencia':
-//             colorLineaFin = '#9252f5';
-//             bolita.classList.add('morado');
-//             break;
-//         default:
-//             colorLineaFin = '#a8a8a8';
-//             contenidoEvento.classList.add('otros');
-//             bolita.classList.add('bolitaOtros');
-//             contenidoEvento.style.width = '100%';
-//             break;
-//     }
-
-//     if(event.motivo === 'modificacionSueldo') {
-//         duracion = duracion + Math.round(espaciosVacios);
-//         evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%;';
-//     } else {
-//         col = col + Math.round(espaciosVacios);
-//         evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%;';
-//         if(todosEventos.indexOf(event) === 0) {
-//             evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%; border-right: solid 3px '+ colorLineaFin +';';
-//         }
+    if(event.motivo === 'modificacionSueldo') {
+        duracion = duracion + Math.round(espaciosVacios);
+        evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%;';
+    } else {
+        col = col + Math.round(espaciosVacios);
+        evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%;';
+        if(todosEventos.indexOf(event) === 0) {
+            evento.style = 'grid-column: '+ col +' / span '+ duracion +';grid-row: '+nivelRow+' / '+nivelRow+'; height: 60%; border-right: solid 3px '+ colorLineaFin +';';
+        }
         
-//     }
+    }
 
 
-//     bolita.addEventListener("click", (eve) => {
+    bolita.addEventListener("click", (eve) => {
 
-//         $('.new_status').addClass("disabled");
-//         $('.new_status').removeClass("active");
-//         var bolitas = document.getElementsByClassName('bolita');
-//         for (let index = 0; index < bolitas.length; index++) {
-//             const element = bolitas[index];
-//             element.style = "";
-//             element.classList.add('disabled');
-//         }
-//         var lineas = document.getElementsByClassName('lineaAbajo');
-//         for (let index = 0; index < lineas.length; index++) {
-//             const element = lineas[index];
-//             element.classList.add('diplayNone');
-//         }
-//         eve.target.classList.remove('disabled');
+        $('.new_status').addClass("disabled");
+        $('.new_status').removeClass("active");
+        var bolitas = document.getElementsByClassName('bolita');
+        for (let index = 0; index < bolitas.length; index++) {
+            const element = bolitas[index];
+            element.style = "";
+            element.classList.add('disabled');
+        }
+        var lineas = document.getElementsByClassName('lineaAbajo');
+        for (let index = 0; index < lineas.length; index++) {
+            const element = lineas[index];
+            element.classList.add('diplayNone');
+        }
+        eve.target.classList.remove('disabled');
         
 
-//         switch(event.motivo) {
-//             case 'contratacion':
-//                 bolita.style = "animation: sombra_naranja 2s infinite;";
-//                 break;
-//             case 'modificacionSueldo':
-//                 bolita.style = "animation: sombra_verde 2s infinite;";
-//                 lineaAbajo.classList.remove('diplayNone');
-//                 break;
-//             case 'cambioPuesto':
-//                 bolita.style = "animation: sombra_azul 2s infinite;";
-//                 break;
-//             case 'baja':
-//                 bolita.style = "animation: sombra_roja 2s infinite;";
-//                 break;
-//             case 'reactivacion':
-//                 bolita.style = "animation: sombra_rosa 2s infinite;";
-//                 break;
-//             case 'transferencia':
-//                 bolita.style = "animation: sombra_morada 2s infinite;";
-//                 break;
-//             default:
-//                 break;
-//         }
-//         myFunction(todosEventos.indexOf(event));
-//     });
+        switch(event.motivo) {
+            case 'contratacion':
+                bolita.style = "animation: sombra_naranja 2s infinite;";
+                break;
+            case 'modificacionSueldo':
+                bolita.style = "animation: sombra_verde 2s infinite;";
+                lineaAbajo.classList.remove('diplayNone');
+                break;
+            case 'cambioPuesto':
+                bolita.style = "animation: sombra_azul 2s infinite;";
+                break;
+            case 'baja':
+                bolita.style = "animation: sombra_roja 2s infinite;";
+                break;
+            case 'reactivacion':
+                bolita.style = "animation: sombra_rosa 2s infinite;";
+                break;
+            case 'transferencia':
+                bolita.style = "animation: sombra_morada 2s infinite;";
+                break;
+            default:
+                break;
+        }
+        myFunction(todosEventos.indexOf(event));
+    });
 
-//     var dropdownBolita = document.createElement('div');
-//     dropdownBolita.classList.add('dropdown');
+    var dropdownBolita = document.createElement('div');
+    dropdownBolita.classList.add('dropdown');
 
-//     var contenedorInfoBolita = document.createElement('div');
-//     contenedorInfoBolita.classList.add('dropdown-content');
-//     contenedorInfoBolita.setAttribute("id", todosEventos.indexOf(event));
+    var contenedorInfoBolita = document.createElement('div');
+    contenedorInfoBolita.classList.add('dropdown-content');
+    contenedorInfoBolita.setAttribute("id", todosEventos.indexOf(event));
 
-//     var tituloInfo = document.createElement('div');
-//     tituloInfo.classList.add('tituloInfo');
-//     var imgInfo = document.createElement('img');
-//     var textInfo = document.createElement('div');
-//     var txt;
+    var tituloInfo = document.createElement('div');
+    tituloInfo.classList.add('tituloInfo');
+    var imgInfo = document.createElement('img');
+    var textInfo = document.createElement('div');
+    var txt;
 
-//     var contenedorInfoBlanca = document.createElement('div');
-//     var contenedorInfoGris = document.createElement('div');
-
-
-//     switch(event.motivo) {
-//         case 'contratacion':
-//             imgInfo.src = 'assets/img/contratacion2.svg';
-//             txt = document.createTextNode('Contratación');
-//             textInfo.style = 'color : #ff8300;';
-
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/puesto.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Puesto');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
-
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoBlanca.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.puesto);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
-
-//             contenedorInfoBlanca.appendChild(document.createElement('br'));
-
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/fecha_inicio.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Fecha inicio');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
-
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoBlanca.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode('15 febrero, 2016');
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorTextoPuesto.classList.add('bold');
-//             contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
+    var contenedorInfoBlanca = document.createElement('div');
+    var contenedorInfoGris = document.createElement('div');
 
 
+    switch(event.motivo) {
+        case 'contratacion':
+            imgInfo.src = 'assets/img/contratacion2.svg';
+            txt = document.createTextNode('Contratación');
+            textInfo.style = 'color : #ff8300;';
 
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/ubicacion.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Ubicación');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/puesto.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Puesto');
+            contenedorTituloPuesto.appendChild(txtPuesto);
 
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoGris.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.puesto);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoGris.appendChild(contenedorTextoPuesto);
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoBlanca.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.puesto);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
+
+            contenedorInfoBlanca.appendChild(document.createElement('br'));
+
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/fecha_inicio.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Fecha inicio');
+            contenedorTituloPuesto.appendChild(txtPuesto);
+
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoBlanca.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode('15 febrero, 2016');
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorTextoPuesto.classList.add('bold');
+            contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
 
 
-//             contenedorInfoGris.appendChild(document.createElement('br'));
 
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/sucursal.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Sucursal');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/ubicacion.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Ubicación');
+            contenedorTituloPuesto.appendChild(txtPuesto);
 
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoGris.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.desc);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoGris.appendChild(contenedorTextoPuesto);
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoGris.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.puesto);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoGris.appendChild(contenedorTextoPuesto);
 
-//             contenedorInfoGris.appendChild(document.createElement('br'));
+
+            contenedorInfoGris.appendChild(document.createElement('br'));
+
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/sucursal.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Sucursal');
+            contenedorTituloPuesto.appendChild(txtPuesto);
+
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoGris.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.desc);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoGris.appendChild(contenedorTextoPuesto);
+
+            contenedorInfoGris.appendChild(document.createElement('br'));
 
             
 
-//             break;
-//         case 'modificacionSueldo':
-//             imgInfo.src = 'assets/img/modificacion_sueldo2.svg';
-//             txt = document.createTextNode('Modificación sueldo');
-//             textInfo.style = 'color : #00a148';
+            break;
+        case 'modificacionSueldo':
+            imgInfo.src = 'assets/img/modificacion_sueldo2.svg';
+            txt = document.createTextNode('Modificación sueldo');
+            textInfo.style = 'color : #00a148';
 
-//                       var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/puesto.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Puesto');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/puesto.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Puesto');
+            contenedorTituloPuesto.appendChild(txtPuesto);
 
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoBlanca.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.puesto);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoBlanca.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.puesto);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoBlanca.appendChild(contenedorTextoPuesto);
 
-//             contenedorInfoBlanca.appendChild(document.createElement('br'));
+            contenedorInfoBlanca.appendChild(document.createElement('br'));
 
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/fecha_inicio.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Fecha inicio');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
-
-
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/ubicacion.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Ubicación');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
-
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoGris.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.puesto);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoGris.appendChild(contenedorTextoPuesto);
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/fecha_inicio.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Fecha inicio');
+            contenedorTituloPuesto.appendChild(txtPuesto);
 
 
-//             contenedorInfoGris.appendChild(document.createElement('br'));
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/ubicacion.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Ubicación');
+            contenedorTituloPuesto.appendChild(txtPuesto);
 
-//             var tituloIconoPuesto = document.createElement('div');
-//             var imgPuesto = document.createElement('img');
-//             imgPuesto.src = 'assets/img/trayectoria/sucursal.svg';
-//             tituloIconoPuesto.appendChild(imgPuesto);
-//             var contenedorTituloPuesto = document.createElement('div');
-//             var txtPuesto = document.createTextNode('Sucursal');
-//             contenedorTituloPuesto.appendChild(txtPuesto);
-
-//             primerContenedorBlanco = document.createElement('div');
-//             primerContenedorBlanco.appendChild(imgPuesto);
-//             primerContenedorBlanco.appendChild(contenedorTituloPuesto);
-//             primerContenedorBlanco.classList.add('flexContainer');
-//             contenedorInfoGris.appendChild(primerContenedorBlanco);
-//             var textoPuesto = document.createTextNode(event.desc);
-//             var contenedorTextoPuesto = document.createElement('div');
-//             contenedorTextoPuesto.appendChild(textoPuesto);
-//             contenedorTextoPuesto.classList.add('flexContainer');
-//             contenedorTextoPuesto.classList.add('textoContenido');
-//             contenedorInfoGris.appendChild(contenedorTextoPuesto);
-
-//             contenedorInfoGris.appendChild(document.createElement('br'));
-//             break;
-//         case 'cambioPuesto':
-//             imgInfo.src = 'assets/img/cambio_de_puesto2.svg';
-//             txt = document.createTextNode('Cambio de puesto');
-//             textInfo.style = 'color : #00b4d1';
-//             break;
-//         case 'baja':
-//             imgInfo.src = 'assets/img/baja2.svg';
-//             txt = document.createTextNode('Baja');
-//             textInfo.style = 'color : #ff2f28';
-//             break;
-//         case 'reactivacion':
-//             imgInfo.src = 'assets/img/reactivacion2.svg';
-//             txt = document.createTextNode('Reactivación');
-//             textInfo.style = 'color : #ff37ee';
-//             break;
-//         case 'transferencia':
-//             imgInfo.src = 'assets/img/transferencia2.svg';
-//             txt = document.createTextNode('Transferencia');
-//             textInfo.style = 'color : #9252f5';
-//             break;
-//         default:
-//             imgInfo.src = '';
-//             txt = document.createTextNode('Otros');
-//             textInfo.style = 'color : #424242';
-//             break;
-//     }
-
-//     contenedorInfoBlanca.classList.add('paddingInfo');
-//     contenedorInfoGris.classList.add('paddingInfo');
-//     textInfo.appendChild(txt);
-//     tituloInfo.appendChild(imgInfo);
-//     tituloInfo.appendChild(textInfo);
-//     contenedorInfoBolita.appendChild(tituloInfo);
-//     contenedorInfoBolita.appendChild(contenedorInfoBlanca);
-//     contenedorInfoGris.classList.add('contenedorInfoGris');
-//     contenedorInfoBolita.appendChild(contenedorInfoGris);
-
-//     var triangle = document.createElement('div');
-//     triangle.classList.add('triangle-with-shadow');
-
-//     contenedorInfoBolita.appendChild(triangle);
-//     dropdownBolita.appendChild(bolita);
-//     dropdownBolita.appendChild(contenedorInfoBolita);
-
-//     contenidoEvento.appendChild(dropdownBolita);
-//     evento.appendChild(contenidoEvento);
-
-//     contenedorItemsGrid.appendChild(evento);
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoGris.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.puesto);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoGris.appendChild(contenedorTextoPuesto);
 
 
-//     sumDuracion = sumDuracion + duracion;
-// });
+            contenedorInfoGris.appendChild(document.createElement('br'));
+
+            var tituloIconoPuesto = document.createElement('div');
+            var imgPuesto = document.createElement('img');
+            imgPuesto.src = 'assets/img/trayectoria/sucursal.svg';
+            tituloIconoPuesto.appendChild(imgPuesto);
+            var contenedorTituloPuesto = document.createElement('div');
+            var txtPuesto = document.createTextNode('Sucursal');
+            contenedorTituloPuesto.appendChild(txtPuesto);
+
+            primerContenedorBlanco = document.createElement('div');
+            primerContenedorBlanco.appendChild(imgPuesto);
+            primerContenedorBlanco.appendChild(contenedorTituloPuesto);
+            primerContenedorBlanco.classList.add('flexContainer');
+            contenedorInfoGris.appendChild(primerContenedorBlanco);
+            var textoPuesto = document.createTextNode(event.desc);
+            var contenedorTextoPuesto = document.createElement('div');
+            contenedorTextoPuesto.appendChild(textoPuesto);
+            contenedorTextoPuesto.classList.add('flexContainer');
+            contenedorTextoPuesto.classList.add('textoContenido');
+            contenedorInfoGris.appendChild(contenedorTextoPuesto);
+
+            contenedorInfoGris.appendChild(document.createElement('br'));
+            break;
+        case 'cambioPuesto':
+            imgInfo.src = 'assets/img/cambio_de_puesto2.svg';
+            txt = document.createTextNode('Cambio de puesto');
+            textInfo.style = 'color : #00b4d1';
+            break;
+        case 'baja':
+            imgInfo.src = 'assets/img/baja2.svg';
+            txt = document.createTextNode('Baja');
+            textInfo.style = 'color : #ff2f28';
+            break;
+        case 'reactivacion':
+            imgInfo.src = 'assets/img/reactivacion2.svg';
+            txt = document.createTextNode('Reactivación');
+            textInfo.style = 'color : #ff37ee';
+            break;
+        case 'transferencia':
+            imgInfo.src = 'assets/img/transferencia2.svg';
+            txt = document.createTextNode('Transferencia');
+            textInfo.style = 'color : #9252f5';
+            break;
+        default:
+            imgInfo.src = '';
+            txt = document.createTextNode('Otros');
+            textInfo.style = 'color : #424242';
+            break;
+    }
+
+    contenedorInfoBlanca.classList.add('paddingInfo');
+    contenedorInfoGris.classList.add('paddingInfo');
+    textInfo.appendChild(txt);
+    tituloInfo.appendChild(imgInfo);
+    tituloInfo.appendChild(textInfo);
+    contenedorInfoBolita.appendChild(tituloInfo);
+    contenedorInfoBolita.appendChild(contenedorInfoBlanca);
+    contenedorInfoGris.classList.add('contenedorInfoGris');
+    contenedorInfoBolita.appendChild(contenedorInfoGris);
+
+    var triangle = document.createElement('div');
+    triangle.classList.add('triangle-with-shadow');
+
+    contenedorInfoBolita.appendChild(triangle);
+    dropdownBolita.appendChild(bolita);
+    dropdownBolita.appendChild(contenedorInfoBolita);
+
+    contenidoEvento.appendChild(dropdownBolita);
+    evento.appendChild(contenidoEvento);
+
+    contenedorItemsGrid.appendChild(evento);
+
+
+    sumDuracion = sumDuracion + duracion;
+});
 
 
 var space = document.createElement('div');
