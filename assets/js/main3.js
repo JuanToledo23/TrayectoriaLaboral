@@ -5,8 +5,8 @@ Array.prototype.unique=function(a){
 });
 
 var trayectoriaPersonal = [
-    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 3, motivo: 'baja', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
+    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 3, motivo: 'baja', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
+    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
     {fechaInicio: '01/11/2008', fechaFin: '31/12/2008', grupo: 2, duracion: 2, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
 
     {fechaInicio: '01/07/2007', fechaFin: '31/12/2007', grupo: 1, duracion: 6, nivel: 0, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'No Registrado', cambioNivel: true, r: '', e:''},
@@ -47,8 +47,8 @@ for (let year = +(trayectoriaPersonal.reverse()[0].fechaInicio.split('/'))[2]; y
 
 var gruposTrayectos = trayectoriaPersonal.map((task) => {
         return task.grupo;
-}).unique();
-
+});
+var posicion = 0;
 var contenedorItemsGrid = document.getElementById('itemsGrid');
 var totalColumnas = anoReales.length * 12;
 var columnasUsadas = 1;
@@ -98,136 +98,16 @@ anoReales.forEach(element => {
     totalWidth = totalWidth + 20;
 });
 
-contenedorItemsGrid.style = 'grid-template-columns: repeat('+totalColumnas+' , 1fr); transform: translate3d('+ movimientoLinea +'%, 0px, 0px); width: ' + totalWidth + '%;';
+contenedorItemsGrid.style = 'grid-template-columns: repeat('+ totalColumnas +' , 1fr); transform: translate3d('+ posicion +'%, 0px, 0px); width: ' + totalWidth + '%;';
+
+
 var gridRow = gruposTrayectos.length + 1;
-
-gruposTrayectos.forEach(grupo => {
-    const eventosGrupo = trayectoriaPersonal.filter(evento => {
-        if(evento.grupo === grupo) {
-            return true;
-        } else {
-            return false;
-        }
-    });
-
-    
-    agregarEvento(eventosGrupo);
-    
-
-    console.log(eventosGrupo);
-});
-
-function agregarEvento(grupo) {
-
-    var heightColor = 100;
-    var mayorDuracion = 0;
-    console.log(grupo.length);
-    
-    var eventoMayorDuracion = null;
-
-    if(grupo.length > 1){
-        heightColor = heightColor / grupo.length;
-        for (let index = 0; index < grupo.length; index++) {
-            if (grupo[index].duracion > mayorDuracion)
-            {
-                mayorDuracion = grupo[index].duracion;
-                eventoMayorDuracion = grupo[index];
-            }
-        }
-
-    } else {
-        mayorDuracion = grupo[0].duracion;
-        eventoMayorDuracion = grupo[0];
-    }
-
-    var mesesSumados = 12 * anoReales.indexOf(eventoMayorDuracion.fechaInicio.split('/')[2]);
-    var columnaInicio = +eventoMayorDuracion.fechaInicio.split('/')[1] + mesesSumados;
-    var columnaSpanFinal = eventoMayorDuracion.duracion;
-    
+trayectoriaPersonal.forEach(eventoSeleccionado => {
     var contenedorEventoPrincipal = document.createElement('div');
     contenedorEventoPrincipal.classList.add('flex');
 
-    if(eventoMayorDuracion.cambioNivel) {
-        gridRow--; 
-    }
-
-    contenedorEventoPrincipal.style = 'grid-column: '+ columnaInicio +' / span '+ columnaSpanFinal +';grid-row: '+ gridRow +' / '+ gridRow +'; height: 60%;';
-
-    var contenedorBolita = document.createElement('div');
-    contenedorBolita.classList.add('contenedorBolita');
-
-    var bolitaPrincipal = document.createElement('div');
-    bolitaPrincipal.classList.add('bolita');
-
-    contenedorBolita.appendChild(bolitaPrincipal);
-
-    grupo.forEach(eventoSeleccionado => {
-        var colorTrayecto = document.createElement('div');
-        
-        /* Comentar en caso de querer que todos los eventos marquen el mismo tiempo de eventos */
-        colorTrayecto.style.width = (eventoSeleccionado.duracion * 100) / mayorDuracion + '%';
-
-        var colorbolita = document.createElement('div');
-        colorbolita.classList.add('colorbolita');
-
-        colorTrayecto.style.height = heightColor + '%';
-        colorbolita.style.height = heightColor + '%';
-
-        switch(eventoSeleccionado.motivo) {
-            case 'contratacion':
-                colorLineaFin = '#ff8300';
-                colorTrayecto.classList.add('naranja');
-                colorbolita.classList.add('bolitaNaranja');
-                break;
-            case 'modificacionSueldo':
-                colorLineaFin = '#00a148';
-                colorTrayecto.classList.add('verde');
-                colorbolita.classList.add('bolitaVerde');
-                break;
-            case 'cambioPuesto':
-                colorLineaFin = '#00b4d1';
-                colorTrayecto.classList.add('azul');
-                colorbolita.classList.add('bolitaAzul');
-                break;
-            case 'baja':
-
-                colorLineaFin = '#ff2f28';
-                colorTrayecto.classList.add('rojo');
-                colorbolita.classList.add('bolitaRojo');
-
-                break;
-            case 'reactivacion':
-                colorLineaFin = '#ff37ee';
-                colorTrayecto.classList.add('rosa');
-                colorbolita.classList.add('bolitaRosa');
-                break;
-            case 'transferencia':
-                colorLineaFin = '#9252f5';
-                colorTrayecto.classList.add('morado');
-                colorbolita.classList.add('bolitaMorado');
-                break;
-            default:
-                colorLineaFin = '#a8a8a8';
-                colorTrayecto.classList.add('otros');
-                colorbolita.classList.add('bolitaOtros');
-                break;
-        }
-
-        bolitaPrincipal.appendChild(colorbolita);
-        contenedorBolita.appendChild(colorTrayecto);
-        
-    });
-        contenedorEventoPrincipal.appendChild(contenedorBolita);
-        contenedorItemsGrid.appendChild(contenedorEventoPrincipal);
-
-}
-
-/* trayectoriaPersonal.forEach(eventoSeleccionado => {
-    var contenedorEventoPrincipal = document.createElement('div');
-    contenedorEventoPrincipal.classList.add('flex');
-
-    var mesInicio = +eventoSeleccionado.fechaInicio.split('/')[1];
-    var columnaInicio = mesInicio;
+    var mesesSumados = 12 * anoReales.indexOf(eventoSeleccionado.fechaInicio.split('/')[2]);
+    var columnaInicio = +eventoSeleccionado.fechaInicio.split('/')[1] + mesesSumados;
     var columnaSpanFinal = eventoSeleccionado.duracion;
     if(eventoSeleccionado.cambioNivel) {
         gridRow--; 
@@ -259,7 +139,7 @@ function agregarEvento(grupo) {
             bolitaPrincipal.classList.add('bolitaVerde');
             
 
-           /*  var lineaAbajo = document.createElement('div');
+            /*  var lineaAbajo = document.createElement('div');
             lineaAbajo.classList.add('lineaAbajo');
             lineaAbajo.classList.add('diplayNone');
             var rowLineAbajo = nivelRow + 1;
@@ -284,7 +164,7 @@ function agregarEvento(grupo) {
             }
             lineaAbajo.appendChild(contenedorTextos);
             contenedorItemsGrid.appendChild(lineaAbajo); 
-
+            */
             break;
         case 'cambioPuesto':
             colorLineaFin = '#00b4d1';
@@ -317,4 +197,4 @@ function agregarEvento(grupo) {
     contenedorBolita.appendChild(bolitaPrincipal)
     contenedorEventoPrincipal.appendChild(contenedorBolita);
     contenedorItemsGrid.appendChild(contenedorEventoPrincipal);
-}); */
+});

@@ -10,22 +10,22 @@
 }
 
 .naranja {
-    background-color: #ff8300;
+    background-color: #ffbd76;
 }
 .verde {
     background-color: #b1e4ca;
 }
 .azul {
-    background-color: #00b4d1;
+    background-color: #65cddd;
 }
 .rojo {
     background-color: #ff9c98;
 }
 .rosa {
-    background-color: #ff37ee;
+    background-color: #ff8ef6;
 }
 .morado {
-    background-color: #9252f5;
+    background-color: #b482ff;
 }
 
 .otros {
@@ -65,44 +65,14 @@
     border-radius: 100%; overflow: hidden;
 }		
 
-.color1{
+.colorTrayecto{
     width: 100%;
-    height: 33.33%;
-    background-color: #b1e4ca;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
 }
-.color2{
+
+.colorBolita{
     width: 100%;
-    height: 33.33%;
-    background-color: #74e4f5;
 }
-.color3{
-    width: 100%;
-    height: 33.33%;
-    background-color: #c095ff;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-.colorBolita1{
-    width: 100%;
-    height: 33.33%;
-    background-color: #00a148;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-}
-.colorBolita2{
-    width: 100%;
-    height: 33.33%;
-    background-color: #00b4d1;
-}
-.colorBolita3{
-    width: 100%;
-    height: 33.33%;
-    background-color: #9252f5;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
+
 
 #grid {
     height: 100px;
@@ -154,7 +124,7 @@
     transition: all 0.8s;
     will-change: transform;
     width: 100%;
-    height: 500px;
+    height: 300px;
     padding-bottom: 100px;
     padding: 0px 17px;
 }
@@ -195,12 +165,13 @@
 }
 
 .contenedorBolita {
-    width: 1.4vw;
+    width: 100%;
     height: 1.4vw;
     border-radius: 50px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .bolita {
@@ -209,6 +180,7 @@
     border-radius: 50px;
     cursor: pointer;
     position: absolute;
+    overflow: hidden;
 }
 
 
@@ -483,4 +455,9 @@
 
     .zoomButton:hover {
         fill: #122338;
+    }
+
+
+    .trayectoEvento {
+        height: 1.4vw;
     }

@@ -6,4 +6,4 @@ document.write('<script type="text/javascript" src="assets/js/menu.js"></script>
 document.write('<script type="text/javascript" src="assets/js/funciones.js"></script>');
 document.write('<script type="text/javascript" src="assets/js/iniciar_tooltip.js"></script>');
 
-document.write('<script type="text/javascript" src="assets/js/main2.js"></script>');
+document.write('<script type="text/javascript" src="assets/js/main3.js"></script>');
