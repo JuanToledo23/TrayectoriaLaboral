@@ -4,39 +4,39 @@ Array.prototype.unique=function(a){
     return function(){return this.filter(a)}}(function(a,b,c){return c.indexOf(a,b+1)<0
 });
 
+// var trayectoriaPersonal = [
+//     {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 3, motivo: 'baja', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
+//     {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
+//     {fechaInicio: '01/11/2008', fechaFin: '31/12/2008', grupo: 2, duracion: 2, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
+
+//     {fechaInicio: '01/07/2007', fechaFin: '31/12/2007', grupo: 1, duracion: 6, nivel: 0, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'No Registrado', cambioNivel: true, r: '', e:''},
+//     {fechaInicio: '16/02/2007', fechaFin: '30/06/2007', grupo: 0, duracion: 5, nivel: 0, motivo: 'contratacion', puesto: 'Analista', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
+
+// ];
 var trayectoriaPersonal = [
-    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 3, motivo: 'baja', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/11/2008', fechaFin: '31/12/2008', grupo: 2, duracion: 2, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
 
-    {fechaInicio: '01/07/2007', fechaFin: '31/12/2007', grupo: 1, duracion: 6, nivel: 0, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'No Registrado', cambioNivel: true, r: '', e:''},
-    {fechaInicio: '16/02/2007', fechaFin: '30/06/2007', grupo: 0, duracion: 5, nivel: 0, motivo: 'contratacion', puesto: 'Analista', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-
-];
-/* var trayectoriaPersonal = [
-
-    {fechaInicio: '11/03/2019', fechaFin: '11/03/2019', grupo: 11, duracion: 1, cambioNivel: false, motivo: 'otros', puesto: 'Gerente De Departamento', no: 0, desc: 'Bienestar Comunicac', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/12/2018', fechaFin: '10/03/2019', grupo: 10, duracion: 4, cambioNivel: false, motivo: 'transferencia', puesto: 'Gerente De Departamento', no: 0, desc: 'Bienestar Comunicac', cambioNivel: true, r:'', e:''},
-    {fechaInicio: '16/12/2017', fechaFin: '15/12/2018', grupo: 10, duracion: 11, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/12/2017', fechaFin: '15/12/2017', grupo: 9, duracion: 1, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/09/2017', fechaFin: '30/11/2017', grupo: 9, duracion: 2, cambioNivel: false, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/01/2015', fechaFin: '15/09/2017', grupo: 8, duracion: 32, cambioNivel: false, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/01/2014', fechaFin: '31/12/2014', grupo: 7, duracion: 11, cambioNivel: false, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/01/2014', fechaFin: '01/01/2014', grupo: 7, duracion: 1, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/01/2012', fechaFin: '31/12/2013', grupo: 6, duracion: 11, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'No Registrado', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/02/2011', fechaFin: '31/12/2011', grupo: 5, duracion: 10, cambioNivel: false, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
+    {fechaInicio: '11/03/2019', fechaFin: '11/03/2019', grupo: 11, duracion: 1, cambioNivel: false, motivo: 'otros', puesto: 'Gerente De Departamento', no: 0, desc: 'Bienestar Comunicac', r:'', e:''},
+    {fechaInicio: '16/12/2018', fechaFin: '10/03/2019', grupo: 10, duracion: 4, cambioNivel: true, motivo: 'transferencia', puesto: 'Gerente De Departamento', no: 0, desc: 'Bienestar Comunicac', cambioNivel: true, r:'', e:''},
+    {fechaInicio: '16/12/2017', fechaFin: '15/12/2018', grupo: 10, duracion: 13, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '01/12/2017', fechaFin: '15/12/2017', grupo: 9, duracion: 1, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '16/09/2017', fechaFin: '30/11/2017', grupo: 9, duracion: 3, cambioNivel: true, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '01/01/2015', fechaFin: '15/09/2017', grupo: 8, duracion: 33, cambioNivel: false, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '01/01/2014', fechaFin: '31/12/2014', grupo: 7, duracion: 12, cambioNivel: true, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '01/01/2014', fechaFin: '01/01/2014', grupo: 7, duracion: 1, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Infor', r:'', e:''},
+    {fechaInicio: '01/01/2012', fechaFin: '31/12/2013', grupo: 5, duracion: 24, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'No Registrado', r:'', e:''},
+    {fechaInicio: '01/02/2011', fechaFin: '31/12/2011', grupo: 5, duracion: 11, cambioNivel: true, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
     
-    {fechaInicio: '01/02/2011', fechaFin: '31/12/2013', grupo: 5, duracion: 22, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/05/2010', fechaFin: '31/01/2011', grupo: 4, duracion: 8, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/05/2010', fechaFin: '31/12/2010', grupo: 4, duracion: 7, cambioNivel: false, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/05/2009', fechaFin: '15/05/2010', grupo: 3, duracion: 12, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/05/2009', fechaFin: '31/12/2009', grupo: 3, duracion: 7, cambioNivel: false, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 5, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '01/11/2008', fechaFin: '31/12/2008', grupo: 2, duracion: 1, cambioNivel: false, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: true, r:'', e:''},
-    {fechaInicio: '01/07/2007', fechaFin: '31/12/2007', grupo: 1, duracion: 4, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'No Registrado', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/02/2007', fechaFin: '30/06/2007', grupo: 0, duracion: 4, cambioNivel: false, motivo: 'contratacion', puesto: 'Analista', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-    {fechaInicio: '16/02/2007', fechaFin: '31/10/2008', grupo: 0, duracion: 8, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'D Sistemas De Informacion', cambioNivel: false, r:'', e:''},
-]; */
+    {fechaInicio: '01/02/2011', fechaFin: '31/12/2013', grupo: 5, duracion: 35, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '16/05/2010', fechaFin: '31/01/2011', grupo: 4, duracion: 9, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '16/05/2010', fechaFin: '31/12/2010', grupo: 4, duracion: 8, cambioNivel: true, motivo: 'transferencia', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/05/2009', fechaFin: '15/05/2010', grupo: 3, duracion: 13, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/05/2009', fechaFin: '31/12/2009', grupo: 3, duracion: 8, cambioNivel: true, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/11/2008', fechaFin: '30/04/2009', grupo: 2, duracion: 6, cambioNivel: true, motivo: 'modificacionSueldo', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/11/2008', fechaFin: '31/12/2008', grupo: 2, duracion: 2, cambioNivel: true, motivo: 'otros', puesto: 'Desarrollador (Sistemas)', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+    {fechaInicio: '01/07/2007', fechaFin: '31/12/2007', grupo: 1, duracion: 6, cambioNivel: false, motivo: 'modificacionSueldo', puesto: 'Analista', no: 0, desc: 'No Registrado', r:'', e:''},
+    {fechaInicio: '16/02/2007', fechaFin: '30/06/2007', grupo: 0, duracion: 5, cambioNivel: false, motivo: 'contratacion', puesto: 'Analista', no: 0, desc: 'D Sistemas De Informacion', r:'', e:''},
+];
 
 var anoActual = (new Date()).getFullYear();
 var anoReales = [];
@@ -98,7 +98,8 @@ anoReales.forEach(element => {
     totalWidth = totalWidth + 20;
 });
 
-contenedorItemsGrid.style = 'grid-template-columns: repeat('+totalColumnas+' , 1fr); transform: translate3d('+ movimientoLinea +'%, 0px, 0px); width: ' + totalWidth + '%;';
+contenedorItemsGrid.style = 'grid-template-columns: repeat('+totalColumnas+' , 1fr); transform: translate3d('+ movimientoLinea +'%, 0px, 0px); width: 100%;';
+// contenedorItemsGrid.style = 'grid-template-columns: repeat('+totalColumnas+' , 1fr); transform: translate3d('+ movimientoLinea +'%, 0px, 0px); width: ' + totalWidth + '%;';
 var gridRow = gruposTrayectos.length + 1;
 
 gruposTrayectos.forEach(grupo => {
@@ -113,15 +114,17 @@ gruposTrayectos.forEach(grupo => {
     
     agregarEvento(eventosGrupo);
     
-
-    console.log(eventosGrupo);
 });
+
+function fechaNumerica(fecha) {
+    var numero = fecha.split('/')[2] + fecha.split('/')[1] + fecha.split('/')[0];
+    return +numero
+}
 
 function agregarEvento(grupo) {
 
     var heightColor = 100;
     var mayorDuracion = 0;
-    console.log(grupo.length);
     
     var eventoMayorDuracion = null;
 
@@ -139,6 +142,23 @@ function agregarEvento(grupo) {
         mayorDuracion = grupo[0].duracion;
         eventoMayorDuracion = grupo[0];
     }
+
+    // if(grupo.length > 1){
+    //     heightColor = heightColor / grupo.length;
+        
+    //     for (let index = 0; index < grupo.length; index++) {
+    //         var fechaInicioNumerica = fechaNumerica(grupo[index].fechaInicio);
+    //         if (fechaInicioNumerica < menorFechaGrupal)
+    //         {
+    //             menorFechaGrupal = fechaInicioNumerica;
+    //             eventoAyorDuracion = grupo[index];
+    //         }
+    //     }
+
+    // } else {
+    //     menorFechaGrupal = grupo[0].duracion;
+    //     eventoAyorDuracion = grupo[0];
+    // }
 
     var mesesSumados = 12 * anoReales.indexOf(eventoMayorDuracion.fechaInicio.split('/')[2]);
     var columnaInicio = +eventoMayorDuracion.fechaInicio.split('/')[1] + mesesSumados;
@@ -165,7 +185,7 @@ function agregarEvento(grupo) {
         var colorTrayecto = document.createElement('div');
         
         /* Comentar en caso de querer que todos los eventos marquen el mismo tiempo de eventos */
-        colorTrayecto.style.width = (eventoSeleccionado.duracion * 100) / mayorDuracion + '%';
+        // colorTrayecto.style.width = (eventoSeleccionado.duracion * 100) / mayorDuracion + '%';
 
         var colorbolita = document.createElement('div');
         colorbolita.classList.add('colorbolita');
@@ -213,10 +233,17 @@ function agregarEvento(grupo) {
                 break;
         }
 
+        if(grupo.length === 1 && grupo[0].duracion === 1){
+            colorTrayecto.classList.add('bg-unset');
+            console.log("quito fondo");
+        }
+
         bolitaPrincipal.appendChild(colorbolita);
         contenedorBolita.appendChild(colorTrayecto);
         
     });
+    
+
         contenedorEventoPrincipal.appendChild(contenedorBolita);
         contenedorItemsGrid.appendChild(contenedorEventoPrincipal);
 
