@@ -5,5 +5,3 @@ document.write('<script type="text/javascript" src="assets/js/header-principal.j
 document.write('<script type="text/javascript" src="assets/js/menu.js"></script>');
 document.write('<script type="text/javascript" src="assets/js/funciones.js"></script>');
 document.write('<script type="text/javascript" src="assets/js/iniciar_tooltip.js"></script>');
-
-document.write('<script type="text/javascript" src="assets/js/main2.js"></script>');
